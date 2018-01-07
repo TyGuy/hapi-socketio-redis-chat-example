@@ -17,27 +17,6 @@ server.register([require('inert'), require('hapi-error')], function() {
       path: '/load',
       handler: require('./lib/load_messages').load,
     },
-    {
-      method: 'GET',
-      path: '/elm',
-      handler: {
-        file: './elm/index.html',
-      },
-    },
-    {
-      method: 'GET',
-      path: '/js/app.js',
-      handler: {
-        file: './elm/js/app.js',
-      },
-    },
-    {
-      method: 'GET',
-      path: '/js/javascript.js',
-      handler: {
-        file: './elm/js/javascript.js',
-      },
-    },
   ]);
 
   server.start(function() {
